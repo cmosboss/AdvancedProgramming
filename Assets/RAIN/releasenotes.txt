@@ -1,0 +1,39 @@
+RAIN version 2.1.4 Release Notes
+--------------------------------
+
+8 great reasons to use RAIN:
+1) Multiple navmeshes in a scene
+2) Off mesh pathfinding
+3) Extensible Behavior trees with tons of features
+4) Sensors
+5) Mecanim Support
+6) Completely customizable solution
+7) Amazing support from Rival Theory
+8) The only fully integrated, all-in-one solution for building amazing AI on Unity
+
+Upgrades:
+---------
+1) Sensor performance has been improved
+2) Expression evaluation has been improved in Behavior Trees
+3) Performance improvements in NavMesh generation
+4) Upgraded NavMesh visualization for smoother polys.
+5) The Detect behavior tree action now uses all sensors that match the sensor name (was using just the first match)
+6) Added Remove and Clear methods for forwarded parameters in the MecanimMotor.
+7) AI initialization is now three step: AIInit() followed by BodyInit(), allowing body to be assigned at runtime.  Start() to match Unity Start and ensure Awake has been called on all components.
+
+
+New Features:
+-------------
+1) You may now create Custom Decisions in the Behavior Tree (these are custom containers rather than simple actions)
+2) AI now pathfind to objects off the NavMesh.  If Allow Off Graph Movement is on in the Motor, the AI can leave the NavMesh to reach targets. AI can also pathfind when they are off the mesh themselves.
+
+Bug Fixes:
+----------
+1) Fixed a bug where NavMesh polys would not generate properly in some rare cases
+2) Fixed issues with prefabs breaking
+3) Fixed sensors not properly calculating their bounds
+4) Fixed GetPathTo so it doesn't interfere with ongoing multi-frame pathfinding on the AI
+
+Notable:
+--------
+The RAIN Autoupdater has been removed.  RAIN now does a better job of auto-upgrading projects.  Please check the Unity Asset Store or the Rival Theory website to find the latest version.

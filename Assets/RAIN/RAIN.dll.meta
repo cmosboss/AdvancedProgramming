@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 652707fc41c88744f87c8ad3c4a903d8
+labels:
+- Behavior
+- Pathfinding
+- RPG
+- FPS
+- Scripting
+- AI
+- BehaviorTrees
+- Sensors
+- Mecanim
+- Animation
+- Motion
+MonoAssemblyImporter:
+  serializedVersion: 1
+  iconMap: {}
+  executionOrder: {}
+  userData: 
