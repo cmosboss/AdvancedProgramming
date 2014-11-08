@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: c775d429f2eb1f7488be870989d09a29
+guid: db4675183923442b8815a4f4c730adde
 TextureImporter:
   fileIDToRecycleName:
-    21300000: log
+    21300000: DungeonBackground
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
