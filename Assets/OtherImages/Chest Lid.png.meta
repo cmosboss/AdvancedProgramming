@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: b9eb3b28d3459b3439278e77fef76a8e
+guid: cfef1c90fa66c48c5bf249f638473e4c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spiked_ball
+    21300000: Chest Lid
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

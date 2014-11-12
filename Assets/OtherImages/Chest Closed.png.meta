@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: b9eb3b28d3459b3439278e77fef76a8e
+guid: b466f1bee9c07412da65b1e7e670684b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spiked_ball
+    21300000: Chest Closed
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
