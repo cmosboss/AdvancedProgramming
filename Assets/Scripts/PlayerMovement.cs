@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour {
 		handleAnimation (vertInput, horizInput);
 
 		handleShooting ();
-
 	}
 	/// <summary>
 	/// Handles the animation.

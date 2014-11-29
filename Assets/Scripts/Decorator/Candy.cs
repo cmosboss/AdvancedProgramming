@@ -6,7 +6,14 @@ public class Candy : PlayerDecorator {
 	public Candy(PlayerComponent player)
 			: base (player)
 	{
-			
+		health = player.health;
+		maxHealth = player.maxHealth;
+		cash = player.cash;
+		damage = player.damage;
+		speed = player.speed;
+		range = player.range;
+		armour = player.armour;
+		numSpecials = player.numSpecials;
 	}
 		
 	public override void Fire(Transform t, Transform p)
@@ -24,6 +31,7 @@ public class Candy : PlayerDecorator {
 		
 	private void LayCandy(Transform t, Transform s)
 	{
+		numSpecials --;
 		Transform candy = Transform.Instantiate(s,t.position, t.rotation) as Transform;	
 	}
 }

@@ -47,12 +47,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Dungeon Art Pack\AnimateSprite.cs" />
-     <Compile Include="Assets\PlayerStats.cs" />
-     <Compile Include="Assets\Scripts\BombCollect.cs" />
-     <Compile Include="Assets\Scripts\BubbleCollect.cs" />
      <Compile Include="Assets\Scripts\ButtonClick.cs" />
-     <Compile Include="Assets\Scripts\CandyCollect.cs" />
-     <Compile Include="Assets\Scripts\Collect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\BombCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\BootsCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\BubbleCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\CandyCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\Collect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\FireArrowCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\LogCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\MoneyBagCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\MysteryBoxCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\PizzaCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\ShieldCollect.cs" />
+     <Compile Include="Assets\Scripts\CollectionScripts\SpikeyBallCollect.cs" />
      <Compile Include="Assets\Scripts\Decorator\Boots.cs" />
      <Compile Include="Assets\Scripts\Decorator\Bubble.cs" />
      <Compile Include="Assets\Scripts\Decorator\Candy.cs" />
@@ -79,6 +86,7 @@
      <Compile Include="Assets\Scripts\PlayerDamage.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
+     <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Potion.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

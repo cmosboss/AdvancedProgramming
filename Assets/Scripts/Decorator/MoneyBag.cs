@@ -6,7 +6,14 @@ public class MoneyBag : PlayerDecorator {
 	public MoneyBag(PlayerComponent player)
 		: base (player)
 	{
-		player.cash += 100;	
+		health = player.health;
+		maxHealth = player.maxHealth;
+		cash = player.cash + 100;
+		damage = player.damage;
+		speed = player.speed;
+		range = player.range;
+		armour = player.armour;
+		numSpecials = player.numSpecials;
 	}
 
 	public override void Fire(Transform t, Transform p)

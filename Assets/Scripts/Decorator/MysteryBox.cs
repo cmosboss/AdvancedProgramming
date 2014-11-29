@@ -10,18 +10,27 @@ public class MysteryBox : PlayerDecorator {
 	{
 		int rand = Random.Range (0, 5);
 
+		health = player.health;
+		maxHealth = player.maxHealth;
+		cash = player.cash;
+		damage = player.damage;
+		speed = player.speed;
+		range = player.range;
+		armour = player.armour;
+		numSpecials = player.numSpecials;
+
 		if (rand == 0)
-			player.maxHealth += 25;
+			maxHealth += 25;
 		else if (rand == 1)
-			player.cash += 25;
+			cash += 25;
 		else if (rand == 2)
-			player.damage += 25;
+			damage +=  25;
 		else if (rand == 3)
-			player.speed += 25;
+			speed += 25;
 		else if (rand == 4)
-			player.range += 25;
+			range +=  25;
 		else if (rand == 5)
-			player.armour += 25;
+			armour += 25;
 	}
 
 	public override void Fire(Transform t, Transform p)

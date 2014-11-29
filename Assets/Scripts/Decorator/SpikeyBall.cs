@@ -6,7 +6,14 @@ public class SpikeyBall : PlayerDecorator {
 	public SpikeyBall(PlayerComponent player)
 		: base (player)
 	{
-		player.damage += 10;	
+		health = player.health;
+		maxHealth = player.maxHealth;
+		cash = player.cash;
+		damage = player.damage + 10;
+		speed = player.speed;
+		range = player.range;
+		armour = player.armour;
+		numSpecials = player.numSpecials;
 	}
 
 	public override void Fire(Transform t, Transform p)
