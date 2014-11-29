@@ -6,8 +6,13 @@ public class Log : PlayerDecorator{
 	public Log(PlayerComponent player)
 		: base (player)
 	{
-		ConcretePlayer.maxHealth += 15;
-		ConcretePlayer.speed -= 5;
+		player.maxHealth += 15;
+		player.speed -= 5;
+	}
+
+	public override void Fire(Transform t, Transform p)
+	{
+		base.Fire (t,p);
 	}
 
 	public override void Special()

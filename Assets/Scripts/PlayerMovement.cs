@@ -5,12 +5,23 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float speed;
 	public Transform projectile;
+	public Transform[] specials;
 	private Animator animator;
 
 	public Texture2D cursorTexture;
 	public CursorMode cursorMode = CursorMode.Auto;
 	public Vector2 hotSpot = Vector2.zero;
-	
+
+	public static PlayerComponent player;
+
+	public static int maxHealth = 100;
+	public static int health = 100;
+	public static int cash = 0;
+	public static int damage = 10;
+	//public static int speed = 10;
+	public static int range = 10;
+	public static int armour = 0;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -18,6 +29,13 @@ public class PlayerMovement : MonoBehaviour {
 		animator.SetInteger ("Direction", 4);
 		//sets the cursor
 		Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+		player = new ConcretePlayer();
+		//same as player = new ConcretePlayer(); but since PlayerComponent inherates from MonoBehaviour(So I can assign public gamobjects 
+		//in the inspector) I had to do it this way.
+		//player = gameObject.AddComponent ("ConcretePlayer") as ConcretePlayer;
+		//player = gameObject.AddComponent<DaBomb>() as DaBomb;
+		//maxHealth = player.maxHealth;
+	
 	}
 		
 	void FixedUpdate () 
@@ -70,10 +88,12 @@ public class PlayerMovement : MonoBehaviour {
 	void handleShooting()
 	{
 
-		if (Input.GetButtonDown("Fire1")) {
-			Transform bullet = Instantiate(projectile,transform.position, transform.rotation) as Transform;
-			//Physics2D.IgnoreCollision( bullet.collider2D,collider2D ); 
-		}
+		if (Input.GetButtonDown ("Fire1")) 
+			player.Fire (transform, projectile);
+
+		else if (Input.GetButtonDown ("Fire2"))
+			player.Special ();
+
 	}
 
 	void OnMouseEnter () {
