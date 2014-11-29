@@ -5,6 +5,7 @@ public class EnemyMovement : MonoBehaviour {
 
 	private Vector3 player;
 	private Vector2 playerDir;
+	private Vector3 candy;
 	private float xdif;
 	private float ydif;
 	public float speed = 1;
@@ -16,7 +17,11 @@ public class EnemyMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		player = GameObject.Find ("Player").transform.position;
+
+		if (GameObject.Find ("CandyPrefab(Clone)") != null) // if the player dropped candy
+			player = GameObject.Find ("CandyPrefab(Clone)").transform.position; // so they follow the candy that the player drops instead.
+		else
+			player = GameObject.Find ("Player").transform.position;
 
 		xdif = player.x - transform.position.x;
 		ydif = player.y - transform.position.y;

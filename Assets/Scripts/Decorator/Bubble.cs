@@ -14,13 +14,18 @@ public class Bubble : PlayerDecorator {
 		base.Fire (t,p);
 	}
 
-	public override void Special()
+	public override void Special(Transform t, Transform[] s)
 	{
-		MakeBubble ();
+		foreach(Transform special in s){
+			if (special.name == "BubblePrefab")
+			MakeBubble (t, special);
+		}
 	}
 	
-	private void MakeBubble()
+	private void MakeBubble(Transform t, Transform s)
 	{
-		
+		Transform bub = Transform.Instantiate(s,t.position, t.rotation) as Transform;
+		bub.parent = t;
+
 	}
 }

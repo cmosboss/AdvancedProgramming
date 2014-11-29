@@ -10,9 +10,10 @@ public abstract class PlayerComponent{
 	public int speed { get; set; }
 	public int range { get; set; }
 	public int armour  { get; set; }
+	public int numSpecials { get; set; }
 	public Transform special { get; set; }
 
 	public abstract void Fire(Transform t, Transform p);
-	public abstract void Special();
+	public abstract void Special(Transform t, Transform[] s);
 	
 }

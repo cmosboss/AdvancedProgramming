@@ -15,8 +15,8 @@ public class Log : PlayerDecorator{
 		base.Fire (t,p);
 	}
 
-	public override void Special()
+	public override void Special(Transform t,Transform[] s)
 	{
-
+		
 	}
 }

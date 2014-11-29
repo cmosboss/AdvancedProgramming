@@ -9,7 +9,7 @@ public abstract class PlayerDecorator : PlayerComponent{
 		this.player = player;
 	}
 
-	public override abstract void Special();
+	public override abstract void Special(Transform t, Transform[] s);
 	
 	public override void Fire(Transform t, Transform p){
 		if (player != null)

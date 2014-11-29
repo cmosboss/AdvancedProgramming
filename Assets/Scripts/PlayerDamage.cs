@@ -30,30 +30,30 @@ public class PlayerDamage : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         animator = this.GetComponent<Animator>();
-
+		health = PlayerMovement.player.health;
 	}
 
     void OnCollisionEnter2D(Collision2D col) 
     {
-        if (col.transform.root.gameObject.tag == "Enemy") 
-        {
-            //grab the parent objects script (chain and saw are composite objects) then get damage from them and apply it
-            int damage = col.transform.root.gameObject.GetComponent<EnemyStats>().damage;
-            ApplyDamage(damage);
-        }
-        if (col.gameObject.tag == "consumable")
-        {
-            int healAmount = col.gameObject.GetComponent<Potion>().healAmount;
-            heal(healAmount);
-            Destroy(col.gameObject);
-        }
-        if (col.gameObject.tag == "collectible")
-        {
-            int amount = col.gameObject.GetComponent<Collect>().amount;
-            collect(amount);
-            Destroy(col.gameObject);
+		if (transform.childCount == 0) {
 
-        }
+						if (col.transform.root.gameObject.tag == "Enemy") {
+								//grab the parent objects script (chain and saw are composite objects) then get damage from them and apply it
+								int damage = col.transform.root.gameObject.GetComponent<EnemyStats> ().damage;
+								ApplyDamage (damage);
+						}
+						if (col.gameObject.tag == "consumable") {
+								int healAmount = col.gameObject.GetComponent<Potion> ().healAmount;
+								heal (healAmount);
+								Destroy (col.gameObject);
+						}
+						if (col.gameObject.tag == "collectible") {
+								int amount = col.gameObject.GetComponent<Collect> ().amount;
+								collect (amount);
+								Destroy (col.gameObject);
+
+						}
+		}
     }
 
 	void ApplyDamage(float damage)

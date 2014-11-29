@@ -13,12 +13,17 @@ public class Candy : PlayerDecorator {
 	{
 		base.Fire (t,p);
 	}
-	public override void Special()
-	{			
-		LayCandy ();
+	public override void Special(Transform t, Transform[] s)
+	{	
+		foreach(Transform special in s){
+			if (special.name == "CandyPrefab")
+				LayCandy (t, special);
+		}		
+
 	}
 		
-	private void LayCandy(){
-			
+	private void LayCandy(Transform t, Transform s)
+	{
+		Transform candy = Transform.Instantiate(s,t.position, t.rotation) as Transform;	
 	}
 }

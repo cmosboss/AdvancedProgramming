@@ -16,14 +16,17 @@ public class DaBomb : PlayerDecorator {
 		base.Fire (t,p);
 	}
 
-	public override void Special()
+	public override void Special(Transform t, Transform[] s)
 	{
-		LayBomb ();
+		foreach(Transform special in s){
+			if (special.name == "BombPrefab")
+				LayBomb (t,special);
+		}
 	}
 
-	private void LayBomb()
+	private void LayBomb(Transform t, Transform s)
 	{
-
+		Transform bomb = Transform.Instantiate(s,t.position, t.rotation) as Transform;
 	}
 
 }

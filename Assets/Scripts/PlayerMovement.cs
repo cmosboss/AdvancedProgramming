@@ -6,21 +6,17 @@ public class PlayerMovement : MonoBehaviour {
 	public float speed;
 	public Transform projectile;
 	public Transform[] specials;
-	private Animator animator;
 
 	public Texture2D cursorTexture;
 	public CursorMode cursorMode = CursorMode.Auto;
 	public Vector2 hotSpot = Vector2.zero;
+	public bool firstLevel; //used to determine if we need to instantiate a concrete player.
+
+	public Rect windowRect = new Rect(20, 20, 120, 50);
 
 	public static PlayerComponent player;
-
-	public static int maxHealth = 100;
-	public static int health = 100;
-	public static int cash = 0;
-	public static int damage = 10;
-	//public static int speed = 10;
-	public static int range = 10;
-	public static int armour = 0;
+	
+	private Animator animator;
 
 	// Use this for initialization
 	void Start()
@@ -29,24 +25,12 @@ public class PlayerMovement : MonoBehaviour {
 		animator.SetInteger ("Direction", 4);
 		//sets the cursor
 		Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-		player = new ConcretePlayer();
-		//same as player = new ConcretePlayer(); but since PlayerComponent inherates from MonoBehaviour(So I can assign public gamobjects 
-		//in the inspector) I had to do it this way.
-		//player = gameObject.AddComponent ("ConcretePlayer") as ConcretePlayer;
-		//player = gameObject.AddComponent<DaBomb>() as DaBomb;
-		//maxHealth = player.maxHealth;
-	
+		if (firstLevel)
+			player = new ConcretePlayer();
 	}
-		
+
 	void FixedUpdate () 
 	{
-		/*
-		var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);//float;
-		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition,Vector3.forward);
-		transform.rotation = rot; //sets rotation of player to look at mouse
-		transform.eulerAngles = new Vector3 (0, 0, transform.eulerAngles.z); //so it only rotates on Z-axis
-		*///using this code would make the controls like hotline miami, doesnt work at all with the current animation tho
-
 		rigidbody2D.angularVelocity = 0; //prevents sliding
 
 		float vertInput = Input.GetAxis ("Vertical");
@@ -60,7 +44,11 @@ public class PlayerMovement : MonoBehaviour {
 		handleShooting ();
 
 	}
-
+	/// <summary>
+	/// Handles the animation.
+	/// </summary>
+	/// <param name="vertInput">Vert input.</param>
+	/// <param name="horizInput">Horiz input.</param>
 	void handleAnimation(float vertInput, float horizInput)
 	{
 		if (vertInput > 0)
@@ -84,23 +72,99 @@ public class PlayerMovement : MonoBehaviour {
 			animator.SetInteger ("Direction", 4);
 		}
 	}
-
+	/// <summary>
+	/// Handles the shooting.
+	/// </summary>
 	void handleShooting()
 	{
-
 		if (Input.GetButtonDown ("Fire1")) 
 			player.Fire (transform, projectile);
 
-		else if (Input.GetButtonDown ("Fire2"))
-			player.Special ();
+		else if (Input.GetButtonDown ("Fire2") && player.numSpecials > 0)
+			player.Special (transform, specials);
 
 	}
-
+	/// <summary>
+	/// Raises the mouse enter event.
+	/// </summary>
 	void OnMouseEnter () {
 		Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
 	}
-	
+	/// <summary>
+	/// Raises the mouse exit event.
+	/// </summary>
 	void OnMouseExit () {
 		Cursor.SetCursor(null, Vector2.zero, cursorMode);
 	}	
+
+	//-----------------------------------
+	//Functions to add items and specials with decorator
+	//-----------------------------------
+
+	/// <summary>
+	/// Adds the log.
+	/// </summary>
+	public void addLog(){
+		player = new Log (player);
+	}
+	/// <summary>
+	/// Adds the money bag.
+	/// </summary>
+	public void addMoneyBag(){
+		player = new MoneyBag (player);
+	}
+	/// <summary>
+	/// Adds the shield.
+	/// </summary>
+	public void addShield(){
+		player = new Shield (player);
+	}
+	/// <summary>
+	/// Adds the boots.
+	/// </summary>
+	public void addBoots(){
+		player = new Boots (player);
+	}
+	/// <summary>
+	/// Adds the mystery box.
+	/// </summary>
+	public void addMysteryBox(){
+		player = new MysteryBox (player);
+	}
+	/// <summary>
+	/// Adds the fire arrow.
+	/// </summary>
+	public void addFireArrow(){
+		player = new FireArrow (player);
+	}
+	/// <summary>
+	/// Adds the spikey ball.
+	/// </summary>
+	public void addSpikeyBall(){
+		player = new SpikeyBall (player);
+	}
+	/// <summary>
+	/// Adds the pizza.
+	/// </summary>
+	public void addPizza(){
+		player = new Pizza (player);
+	}
+	/// <summary>
+	/// Adds the da bomb.
+	/// </summary>
+	public void addDaBomb(){
+		player = new DaBomb (player);
+	}
+	/// <summary>
+	/// Adds the bubble.
+	/// </summary>
+	public void addBubble(){
+		player = new Bubble (player);
+	}
+	/// <summary>
+	/// Adds the candy.
+	/// </summary>
+	public void addCandy(){
+		player = new Candy (player);
+	}
 }
