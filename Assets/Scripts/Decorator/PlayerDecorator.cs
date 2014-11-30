@@ -11,8 +11,8 @@ public abstract class PlayerDecorator : PlayerComponent{
 
 	public override abstract void Special(Transform t, Transform[] s);
 	
-	public override void Fire(Transform t, Transform p){
+	public override void Fire(Transform t, Transform p, GameObject o){
 		if (player != null)
-			player.Fire (t,p);
+			player.Fire (t,p,o);
 	}
 }

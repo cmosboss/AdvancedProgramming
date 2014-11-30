@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ConcretePlayer : PlayerComponent {
 
+	public int pooledAmount = 20;
+	List<GameObject> bullets;
 	
 	//constructor
 	public ConcretePlayer()
@@ -18,9 +21,12 @@ public class ConcretePlayer : PlayerComponent {
 		numSpecials = 3;
 	}
 
-	public override void Fire(Transform t, Transform p){
-		Transform bullet = Transform.Instantiate(p,t.position, t.rotation) as Transform;
-		//Instantiate(p,t.position, t.rotation); //as GameObject;
+	public override void Fire(Transform t, Transform p, GameObject o){
+
+		if (o == null) return;
+		o.transform.position = t.position;
+		o.SetActive (true);
+
 	}
 
 	public override void Special(Transform t, Transform[] s){

@@ -13,7 +13,7 @@ public abstract class PlayerComponent{
 	public int numSpecials { get; set; }
 	public Transform special { get; set; }
 
-	public abstract void Fire(Transform t, Transform p);
+	public abstract void Fire(Transform t, Transform p, GameObject o);
 	public abstract void Special(Transform t, Transform[] s);
 	
 }

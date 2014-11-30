@@ -13,11 +13,12 @@ public class Shield : PlayerDecorator {
 		speed = player.speed;
 		range = player.range;
 		armour = player.armour + 10;
+		numSpecials = player.numSpecials;
 	}
 
-	public override void Fire(Transform t, Transform p)
+	public override void Fire(Transform t, Transform p, GameObject o)
 	{
-		base.Fire (t,p);
+		base.Fire (t,p, o);
 	}
 
 	public override void Special(Transform t,Transform[] s)

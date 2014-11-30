@@ -12,8 +12,10 @@ public class PlayerMovement : MonoBehaviour {
 	public Vector2 hotSpot = Vector2.zero;
 	public bool firstLevel; //used to determine if we need to instantiate a concrete player.
 
-	public Rect windowRect = new Rect(20, 20, 120, 50);
+	public GameObject obj;
 
+	public Rect windowRect = new Rect(20, 20, 120, 50);
+	
 	public static PlayerComponent player;
 	
 	private Animator animator;
@@ -76,12 +78,12 @@ public class PlayerMovement : MonoBehaviour {
 	/// </summary>
 	void handleShooting()
 	{
+		obj = Pool.current.GetPooledObjects ();
 		if (Input.GetButtonDown ("Fire1")) 
-			player.Fire (transform, projectile);
+			player.Fire (transform, projectile,obj);
 
 		else if (Input.GetButtonDown ("Fire2") && player.numSpecials > 0)
 			player.Special (transform, specials);
-
 	}
 	/// <summary>
 	/// Raises the mouse enter event.

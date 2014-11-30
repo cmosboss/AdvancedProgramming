@@ -81,11 +81,12 @@
      <Compile Include="Assets\Scripts\EnemyStats.cs" />
      <Compile Include="Assets\Scripts\FadeOut.cs" />
      <Compile Include="Assets\Scripts\LevelTransition.cs" />
+     <Compile Include="Assets\Scripts\Object Pool\PlayerProjectile.cs" />
+     <Compile Include="Assets\Scripts\Object Pool\Pool.cs" />
      <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
      <Compile Include="Assets\Scripts\PlayerDamage.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Potion.cs" />
  <Reference Include="UnityEngine.UI">

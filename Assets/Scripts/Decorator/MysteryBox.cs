@@ -33,9 +33,9 @@ public class MysteryBox : PlayerDecorator {
 			armour += 25;
 	}
 
-	public override void Fire(Transform t, Transform p)
+	public override void Fire(Transform t, Transform p, GameObject o)
 	{
-		base.Fire (t,p);
+		base.Fire (t,p, o);
 	}
 
 	public override void Special(Transform t,Transform[] s)
