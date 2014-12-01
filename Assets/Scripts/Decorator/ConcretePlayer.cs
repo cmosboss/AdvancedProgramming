@@ -18,7 +18,7 @@ public class ConcretePlayer : PlayerComponent {
 		speed = 10;
 		range = 10;
 		armour = 0;
-		numSpecials = 3;
+		numSpecials = 6;
 	}
 
 	public override void Fire(Transform t, Transform p, GameObject o){

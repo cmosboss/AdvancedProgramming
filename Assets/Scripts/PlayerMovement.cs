@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float speed;
 	public Transform projectile;
 	public Transform[] specials;
-
+	public static PlayerMovement myPlayer;
 	public Texture2D cursorTexture;
 	public CursorMode cursorMode = CursorMode.Auto;
 	public Vector2 hotSpot = Vector2.zero;
@@ -20,6 +20,18 @@ public class PlayerMovement : MonoBehaviour {
 	
 	private Animator animator;
 
+
+	void Awake(){
+
+		if (myPlayer == null) {
+			DontDestroyOnLoad (gameObject);
+			myPlayer = this;
+		}
+		else if (myPlayer != this) {
+			Destroy (gameObject);
+		}
+
+	}
 	// Use this for initialization
 	void Start()
 	{
@@ -33,6 +45,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void FixedUpdate () 
 	{
+		speed = 100 + player.speed;//speed of player is determined by the speed of the player from decorator
 		rigidbody2D.angularVelocity = 0; //prevents sliding
 
 		float vertInput = Input.GetAxis ("Vertical");

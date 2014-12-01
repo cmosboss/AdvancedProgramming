@@ -11,7 +11,7 @@ public class FireArrow : PlayerDecorator {
 		cash = player.cash;
 		damage = player.damage + 5;
 		speed = player.speed;
-		range = player.range + 5;
+		range = player.range + 10;
 		armour = player.armour;
 		numSpecials = player.numSpecials;
 	}

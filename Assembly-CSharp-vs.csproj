@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Dungeon Art Pack\AnimateSprite.cs" />
+     <Compile Include="Assets\Scripts\BombExplosion.cs" />
      <Compile Include="Assets\Scripts\ButtonClick.cs" />
      <Compile Include="Assets\Scripts\CollectionScripts\BombCollect.cs" />
      <Compile Include="Assets\Scripts\CollectionScripts\BootsCollect.cs" />
@@ -89,6 +90,7 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Potion.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

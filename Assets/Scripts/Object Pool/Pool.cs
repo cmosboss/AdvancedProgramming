@@ -14,6 +14,7 @@ public class Pool : MonoBehaviour {
 	void Awake()
 	{
 		current = this;
+		DontDestroyOnLoad (transform.gameObject);
 	}
 
 	void Start() {

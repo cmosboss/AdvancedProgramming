@@ -4,8 +4,7 @@ using System.Collections;
 public class EnemyDamage : MonoBehaviour {
 
 	public float health;
-    public GameObject Potion;
-    public GameObject Coin;
+	public GameObject[] droppables;
 	// Use this for initialization
 	void Start () {
 	
@@ -24,19 +23,8 @@ public class EnemyDamage : MonoBehaviour {
     void ObjectDies()
     {
         //drop object at random on death
-        int drop = Random.Range(0, 2);
-        if (drop == 0)
-        {
-            Instantiate(Potion, transform.position, Quaternion.identity);
-        }
-        else if (drop == 1)
-        {
-            Instantiate(Coin, transform.position, Quaternion.identity);
-        }
-        else
-        {
-            //no drop 
-        }
+		Instantiate(droppables[Random.Range(0,droppables.Length - 1)], transform.position, Quaternion.identity);
+     
     }
 
 	void ApplyDamage(float damage)

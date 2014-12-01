@@ -4,7 +4,8 @@ using System.Collections;
 public class PlayerDamage : MonoBehaviour {
 
     public float health = 100f;
-    private int money = 0;
+	public Vector2 startPos;
+
     private Animator animator;
 
 
@@ -27,8 +28,13 @@ public class PlayerDamage : MonoBehaviour {
     int frameMarginLeft = 10;
     int frameMarginTop = 10;
 
+	void Awake(){
+		transform.position = startPos;
+	}
+
 	// Use this for initialization
 	void Start () {
+		//startPos = transform.position;
         animator = this.GetComponent<Animator>();
 		health = PlayerMovement.player.health;
 	}
@@ -77,7 +83,11 @@ public class PlayerDamage : MonoBehaviour {
 
     void Reset() 
     {
-        Application.LoadLevel(Application.loadedLevelName);
+		gameObject.GetComponent<PlayerMovement>().enabled = true;
+		//PlayerMovement.myPlayer = null; // so the dead body stays where the player died
+		Application.LoadLevel(Application.loadedLevelName);
+		animator.SetInteger ("Die", 0);
+		Destroy (gameObject);
     }
 
 
@@ -91,8 +101,7 @@ public class PlayerDamage : MonoBehaviour {
     }
     void collect(int amount)
     {
-        money += amount;
-        Debug.Log(money);
+		PlayerMovement.player.cash += 1;
     }
 
 	// Update is called once per frame
