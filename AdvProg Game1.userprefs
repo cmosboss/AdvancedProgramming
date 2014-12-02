@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Observer\Handler.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Decorator\PlayerDecorator.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\Observer\Handler.cs" Line="9" Column="9" />
+      <File FileName="Assets\Scripts\Decorator\PlayerComponent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Observer\ConcreteObserver.cs" Line="18" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
