@@ -36,7 +36,7 @@ public class PlayerDamage : MonoBehaviour {
 	void Start () {
 		//startPos = transform.position;
         animator = this.GetComponent<Animator>();
-		health = PlayerMovement.player.health;
+        health = gameObject.GetComponent<PlayerDamage>().health;
 	}
 
     void OnCollisionEnter2D(Collision2D col) 

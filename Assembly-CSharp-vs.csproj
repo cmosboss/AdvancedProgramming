@@ -80,12 +80,20 @@
      <Compile Include="Assets\Scripts\EnemyDamage.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\EnemyStats.cs" />
+     <Compile Include="Assets\Scripts\Factory\BasicLevel.cs" />
+     <Compile Include="Assets\Scripts\Factory\BossLevel.cs" />
+     <Compile Include="Assets\Scripts\Factory\EnvLevel.cs" />
+     <Compile Include="Assets\Scripts\Factory\Factory.cs" />
      <Compile Include="Assets\Scripts\FadeOut.cs" />
      <Compile Include="Assets\Scripts\LevelTransition.cs" />
      <Compile Include="Assets\Scripts\Object Pool\PlayerProjectile.cs" />
      <Compile Include="Assets\Scripts\Object Pool\Pool.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Observer\ConcreteObserver.cs" />
      <Compile Include="Assets\Scripts\Observer\Handler.cs" />
+=======
+     <Compile Include="Assets\Scripts\Originator.cs" />
+>>>>>>> 8ffcf39fdb9ceeb83c4cf32c101ab01576b849e5
      <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
      <Compile Include="Assets\Scripts\PlayerDamage.cs" />
@@ -93,11 +101,15 @@
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Potion.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\dodads.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+<<<<<<< HEAD
  </Reference>
  <Reference Include="RAIN">
  <HintPath>C:/Users/Kyler/Desktop/AdvProg Game1/Assets/RAIN/RAIN.dll</HintPath>
+=======
+>>>>>>> 8ffcf39fdb9ceeb83c4cf32c101ab01576b849e5
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

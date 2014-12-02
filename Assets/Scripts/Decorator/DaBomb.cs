@@ -35,6 +35,7 @@ public class DaBomb : PlayerDecorator {
 	{
 		numSpecials --;
 		Transform bomb = Transform.Instantiate(s,t.position, t.rotation) as Transform;
+        bomb.GetType();
 
 	}
 

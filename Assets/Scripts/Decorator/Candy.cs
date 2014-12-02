@@ -32,6 +32,7 @@ public class Candy : PlayerDecorator {
 	private void LayCandy(Transform t, Transform s)
 	{
 		numSpecials --;
-		Transform candy = Transform.Instantiate(s,t.position, t.rotation) as Transform;	
+		Transform candy = Transform.Instantiate(s,t.position, t.rotation) as Transform;
+        candy.GetType();
 	}
 }
