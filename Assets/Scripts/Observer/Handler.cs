@@ -41,8 +41,8 @@ public class Handler : MonoBehaviour
 		{
 		if (Obs.TypeOfSignal == 0) {
 		
-			int tempX = Obs.EnemyCoordX;
-			int tempY = Obs.EnemyCoordY;
+			int tempX = (int)Obs.EnemyCoordX;
+			int tempY = (int)Obs.EnemyCoordY;
 		} 
 		else if (Obs.TypeOfSignal == 1) {
 
@@ -67,7 +67,7 @@ public class Handler : MonoBehaviour
 		foreach (Handler o in handlers)
 
 			{
-				HandleSignal(o);
+               // HandleSignal(o);
 			}
 		}
 	//This is a number in place in case I need to track a specific clone

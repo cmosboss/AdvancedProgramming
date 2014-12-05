@@ -13,6 +13,7 @@ public class BossLevel : MonoBehaviour {
         enemey.transform.position = new Vector3(width, height, 0);
         enemey.transform.localScale = new Vector3(2, 2, 0);
         enemey.gameObject.tag = "Enemy";
+        enemey.gameObject.name = "EnemyPrefabs/Skeletor";
         enemey.gameObject.GetComponent<EnemyDamage>().health = enemey.gameObject.GetComponent<EnemyDamage>().health*15;
 	}
 	

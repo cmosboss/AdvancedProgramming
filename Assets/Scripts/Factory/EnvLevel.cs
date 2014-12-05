@@ -14,6 +14,8 @@ public class EnvLevel : MonoBehaviour {
             crate.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 180));
             crate.transform.position = new Vector3(width, height, 0);
             crate.gameObject.tag = "dodad";
+            crate.gameObject.name = "DoDads/Crate";
+
         }
         for (int i = 0; i < 4; i++)
         {
@@ -23,6 +25,8 @@ public class EnvLevel : MonoBehaviour {
             chain.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 180));
             chain.transform.position = new Vector3(width, height, 0);
             chain.gameObject.tag = "Enemy";
+            chain.gameObject.name = "DoDads/chain";
+
 
         }
     }

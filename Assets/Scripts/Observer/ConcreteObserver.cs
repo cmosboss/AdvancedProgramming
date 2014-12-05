@@ -11,8 +11,8 @@ public class ConcreteObserver : Handler
 		// Use this for initialization
 		void Start ()
 		{
-		ObsTracker = Handler.UpdateObserverNum ();
-		Handler.Attach (this);
+		    //ObsTracker = Handler.UpdateObserverNum ();
+		    //Handler.Attach (this);
 		}
 	
 		// Update is called once per frame
@@ -36,7 +36,7 @@ public class ConcreteObserver : Handler
 		public void Notify()
 		{
 		//Use when hit, Start Tracking
-		Handler.SendSignal();
+		//Handler.SendSignal();
 		}
 }
 

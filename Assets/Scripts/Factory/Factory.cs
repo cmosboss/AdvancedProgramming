@@ -7,10 +7,15 @@ public class Factory : MonoBehaviour
 {
     void Start()
     {
+        create();
+    }
+
+    void create() 
+    {
         LevelFactory MyFactory = new LevelFactory();
         int rand = UnityEngine.Random.Range(1, 10);
         Level MyLevel;
-        if (rand < 5) 
+        if (rand < 5)
         {
             MyLevel = MyFactory.create("Basic");
         }
@@ -18,13 +23,13 @@ public class Factory : MonoBehaviour
         {
             MyLevel = MyFactory.create("Env");
         }
-        else 
+        else
         {
             MyLevel = MyFactory.create("Boss");
         }
         MyLevel.create();
         String MyType = MyLevel.Type();
-        if (MyType == "Basic") 
+        if (MyType == "Basic")
         {
             basic();
         }
@@ -36,6 +41,20 @@ public class Factory : MonoBehaviour
         {
             env();
         }
+    }
+
+    public void destroyAll() 
+    {
+        foreach (GameObject o in GameObject.FindObjectsOfType<GameObject>())
+        {
+            if (o.tag == "Enemy" || o.tag == "dodad") 
+            {
+                Destroy(o);
+
+            }
+        }
+        create();
+ 
     }
 
     public class LevelFactory

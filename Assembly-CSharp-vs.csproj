@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{8D77AFA1-9915-3BFA-CCA3-3DA2DBE9466E}</ProjectGuid>
+	<ProjectGuid>{C3CD965C-42DF-BAD8-5231-8E5429D8BE23}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -88,12 +88,9 @@
      <Compile Include="Assets\Scripts\LevelTransition.cs" />
      <Compile Include="Assets\Scripts\Object Pool\PlayerProjectile.cs" />
      <Compile Include="Assets\Scripts\Object Pool\Pool.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Observer\ConcreteObserver.cs" />
      <Compile Include="Assets\Scripts\Observer\Handler.cs" />
-=======
      <Compile Include="Assets\Scripts\Originator.cs" />
->>>>>>> 8ffcf39fdb9ceeb83c4cf32c101ab01576b849e5
      <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
      <Compile Include="Assets\Scripts\PlayerDamage.cs" />
@@ -102,14 +99,10 @@
      <Compile Include="Assets\Scripts\Potion.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\dodads.cs" />
+     <Compile Include="Assets\loadScene.cs" />
+     <Compile Include="Assets\saveScene.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
-<<<<<<< HEAD
- </Reference>
- <Reference Include="RAIN">
- <HintPath>C:/Users/Kyler/Desktop/AdvProg Game1/Assets/RAIN/RAIN.dll</HintPath>
-=======
->>>>>>> 8ffcf39fdb9ceeb83c4cf32c101ab01576b849e5
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

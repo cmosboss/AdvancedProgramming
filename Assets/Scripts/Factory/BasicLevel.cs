@@ -15,6 +15,8 @@ public class BasicLevel : MonoBehaviour {
             crate.transform.eulerAngles = new Vector3(0, 0, Random.Range(0,180));
             crate.transform.position = new Vector3(width, height, 0);
             crate.gameObject.tag = "dodad";
+            crate.gameObject.name = "DoDads/Crate";
+
         }
         for (int i = 0; i < 10; i++)
         {
@@ -27,7 +29,8 @@ public class BasicLevel : MonoBehaviour {
                 float width = Random.Range(21, 25);
                 enemey.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 180));
                 enemey.transform.position = new Vector3(width, height, 0);
-                enemey.gameObject.tag = "dodad";
+                enemey.gameObject.tag = "Enemy";
+                enemey.gameObject.name = "EnemyPrefabs/Skeletor";
             }
             else 
             {
@@ -36,7 +39,9 @@ public class BasicLevel : MonoBehaviour {
                 float width = Random.Range(21, 25);
                 enemey.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, 180));
                 enemey.transform.position = new Vector3(width, height, 0);
-                enemey.gameObject.tag = "dodad";
+                enemey.gameObject.tag = "Enemy";
+                enemey.gameObject.name = "EnemyPrefabs/Spyder";
+
 
             }
 
